@@ -11,7 +11,7 @@ import (
 func FindBusStops(c *gin.Context) {
 	var GetStops []models.BusStop
 	models.DB.Find(&GetStops)
-	c.JSON(http.StatusOK, gin.H{"data": GetStops})
+	c.JSON(http.StatusOK, GetStops)
 }
 
 // GET /bus_stop/:bs_id
@@ -22,5 +22,5 @@ func FindBusStop(c *gin.Context) {
 	  c.JSON(http.StatusBadRequest, gin.H{"error": "Record not found!"})
 	  return
 	}
-	c.JSON(http.StatusOK, gin.H{"data": GetStop})
+	c.JSON(http.StatusOK, GetStop)
   }
