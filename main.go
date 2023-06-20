@@ -24,5 +24,8 @@ func main() {
 	r.GET("/bus_stops", controllers.FindBusStops)
 	r.GET("/bus_stops/:bs_id", controllers.FindBusStop)
 
+	// /map_markers
+	r.GET("/map_markers", controllers.GetMapMarkers)
+
 	r.Run()
 }
