@@ -22,6 +22,8 @@ func ConnectDatabase() {
 	}
 
 	err = db.AutoMigrate(&BusStop{})
+	err = db.AutoMigrate(&BusRoute{})
+	err = db.AutoMigrate(&BusRouteStop{})
 	
 	if err != nil {
 			return
