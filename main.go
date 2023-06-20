@@ -28,6 +28,10 @@ func main() {
 	r.GET("/bus_routes", controllers.FindBusRoutes)
 	r.GET("/bus_routes/:br_id", controllers.FindBusRoute)
 
+	// /bus_route_stops
+	r.GET("/bus_route_stops", controllers.FindBusRouteStops)
+	r.GET("/bus_route_stop/:brs_id", controllers.FindBusRouteStop)
+
 	// /map_markers
 	r.GET("/map_markers", controllers.GetMapMarkers)
 
