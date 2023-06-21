@@ -30,7 +30,7 @@ func main() {
 
 	// /bus_route_stops
 	r.GET("/bus_route_stops", controllers.FindBusRouteStops)
-	r.GET("/bus_route_stop/:brs_id", controllers.FindBusRouteStop)
+	r.GET("/bus_route_stops/:brs_id", controllers.FindBusRouteStop)
 
 	// /map_markers
 	r.GET("/map_markers", controllers.GetMapMarkers)
