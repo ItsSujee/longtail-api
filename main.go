@@ -38,5 +38,8 @@ func main() {
 	// /nearby_bus_stops
 	r.GET("/nearby_bus_stops", controllers.FindNearbyBusStops)
 
+	// /nearby_bus_routes
+	r.GET("/nearby_bus_routes/:bs_id", controllers.FindNearbyBusRoutes)
+
 	r.Run()
 }

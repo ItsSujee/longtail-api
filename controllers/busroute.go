@@ -23,4 +23,4 @@ func FindBusRoute(c *gin.Context) {
 	  return
 	}
 	c.JSON(http.StatusOK, GetRoute)
-  }
+}
