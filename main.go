@@ -38,8 +38,8 @@ func main() {
 	// /nearby_bus_stops
 	r.GET("/nearby_bus_stops", controllers.FindNearbyBusStops)
 
-	// /nearby_bus_routes
-	r.GET("/nearby_bus_routes/:bs_id", controllers.FindNearbyBusRoutes)
+	// /bus_routes_from_bus_id
+	r.GET("/bus_routes_from_bus_id/:bs_id", controllers.FindBusRoutesFromStop)
 
 	r.Run()
 }
