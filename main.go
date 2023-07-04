@@ -16,21 +16,21 @@ func main() {
 	// root /
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"message": "Hello world!",
+			"message": "Routes: /map_markers /nearby_bus_stops /bus_routes_from_bus_id/:bs_id /bus_run_schedule",
 		})
 	})
 
 	// /bus_stops
-	r.GET("/bus_stops", controllers.FindBusStops)
-	r.GET("/bus_stops/:bs_id", controllers.FindBusStop)
+	// r.GET("/bus_stops", controllers.FindBusStops)
+	// r.GET("/bus_stops/:bs_id", controllers.FindBusStop)
 
 	// /bus_routes
-	r.GET("/bus_routes", controllers.FindBusRoutes)
-	r.GET("/bus_routes/:br_id", controllers.FindBusRoute)
+	// r.GET("/bus_routes", controllers.FindBusRoutes)
+	// r.GET("/bus_routes/:br_id", controllers.FindBusRoute)
 
 	// /bus_route_stops
-	r.GET("/bus_route_stops", controllers.FindBusRouteStops)
-	r.GET("/bus_route_stops/:brs_id", controllers.FindBusRouteStop)
+	// r.GET("/bus_route_stops", controllers.FindBusRouteStops)
+	// r.GET("/bus_route_stops/:brs_id", controllers.FindBusRouteStop)
 
 	// /map_markers
 	r.GET("/map_markers", controllers.GetMapMarkers)
@@ -40,6 +40,9 @@ func main() {
 
 	// /bus_routes_from_bus_id
 	r.GET("/bus_routes_from_bus_id/:bs_id", controllers.FindBusRoutesFromStop)
+
+	// /bus_run_schedule
+	r.GET("/bus_run_schedule", controllers.FindBusSchedule)
 
 	r.Run()
 }

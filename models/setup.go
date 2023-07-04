@@ -20,10 +20,6 @@ func ConnectDatabase() {
 	if err != nil {
 			panic("Failed to connect to database!")
 	}
-
-	err = db.AutoMigrate(&BusStop{})
-	err = db.AutoMigrate(&BusRoute{})
-	err = db.AutoMigrate(&BusRouteStop{})
 	
 	if err != nil {
 			return
