@@ -6,5 +6,5 @@ type BusRoute struct {
 	StartBsId     uint   `json:"start_bs_id"`
 	EndBsId       uint   `json:"end_bs_id"`
 	ArrivalTime   string `json:"arrival_time"`
-	MinsToArrival uint   `json:"mins_to_arrival"`
+	MinsToArrival string `json:"mins_to_arrival"`
 }
